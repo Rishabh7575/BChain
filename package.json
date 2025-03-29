@@ -36,8 +36,9 @@
     ]
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
     "@openzeppelin/contracts": "^4.7.3",
-    "hardhat": "^2.12.0"
+    "ethers": "^5.8.0",
+    "hardhat": "^2.22.19"
   }
 }
