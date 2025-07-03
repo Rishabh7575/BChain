@@ -25,6 +25,7 @@ function App() {
 
   const loadBlockchainData = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
+
     setProvider(provider);
     const network = await provider.getNetwork();
 
@@ -87,11 +88,15 @@ function App() {
                 <img src={home.image} alt="Home" />
               </div>
               <div className="card__info">
-                <h4>{home.attributes[0].value} ETH</h4>
+                <h4>
+                  {home.attributes?.[0]?.value
+                    ? `${home.attributes[0].value} ETH`
+                    : "N/A"}
+                </h4>
                 <p>
-                  <strong>{home.attributes[2].value}</strong> bds |
-                  <strong>{home.attributes[3].value}</strong> ba |
-                  <strong>{home.attributes[4].value}</strong> sqft
+                  <strong>{home.attributes?.[2]?.value || "N/A"}</strong> bds |
+                  <strong>{home.attributes?.[3]?.value || "N/A"}</strong> ba |
+                  <strong>{home.attributes?.[4]?.value || "N/A"}</strong> sqft
                 </p>
                 <p>{home.address}</p>
               </div>

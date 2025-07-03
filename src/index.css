@@ -212,6 +212,28 @@ header {
 }
 
 /* ------------------------------------------------------ */
+/* -- FOOTER -- */
+
+footer {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-family: "Open Sans";
+  font-size: 0.9em;
+}
+
+footer a {
+  color: var(--clr-blue);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--clr-blue-2);
+}
 /* -- HOMES -- */
 
 .home {
@@ -223,6 +245,8 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  outline: none; /* Ensure focus outline is visible when modal is active */
 }
 
 .home__details {

@@ -2,9 +2,11 @@ import logo from "../assets/logo.svg";
 
 const Navigation = ({ account, setAccount }) => {
   const connectHandler = async () => {
+    console.log("ki");
     const accounts = await window.ethereum.request({
       method: "eth_requestAccounts",
     });
+    console.log(accounts);
     setAccount(accounts[0]);
   };
   return (
